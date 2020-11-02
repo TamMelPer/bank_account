@@ -38,7 +38,7 @@ touch lib/bankaccount.rb
 :004 > savings.balance
 => 0
 ```
-- Demonstrating the second user story, deposit: 
+- Demonstrating the second user story, deposit:
 ```ruby
 :002 > savings = BankAccount.new
 :003 > savings.balance
@@ -47,4 +47,14 @@ touch lib/bankaccount.rb
 => 5
 :005 > savings
 => #<BankAccount:0x00007fca550b9bc8 @balance=5>
+```
+- The third user story, withdraw:
+```ruby
+:002 > savings = BankAccount.new
+:003 > savings.deposit(150)
+=> 150
+:004 > savings.withdraw(75)
+=> 75
+:005 > savings
+=> #<BankAccount:0x00007fd8901a6060 @balance=75>
 ```
