@@ -27,3 +27,14 @@ end
 touch spec/bankaccount_spec.rb
 touch lib/bankaccount.rb
 ```
+
+- After the first Red-Green-Refactor, my feature test works:
+```ruby
+:001 > require './lib/bankaccount.rb'
+=> true
+:002 > savings = BankAccount.new
+:003 > savings
+=> #<BankAccount:0x00007fb65f93fdd8 @balance=0>
+:004 > savings.balance
+=> 0
+```
