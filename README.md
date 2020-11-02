@@ -58,3 +58,15 @@ touch lib/bankaccount.rb
 :005 > savings
 => #<BankAccount:0x00007fd8901a6060 @balance=75>
 ```
+- Added an edge case to prevent the balance going below 0
+```ruby
+:002 > savings = BankAccount.new
+:003 > savings.withdraw(75)
+Traceback (most recent call last):
+       5: from /Users/melissapereira/.rvm/rubies/ruby-2.7.0/bin/irb:23:in `<main>'
+       4: from /Users/melissapereira/.rvm/rubies/ruby-2.7.0/bin/irb:23:in `load'
+       3: from /Users/melissapereira/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/irb-1.2.1/exe/irb:11:in `<top (required)>'
+       2: from (irb):3
+       1: from /Users/melissapereira/Projects/bank_account/lib/bankaccount.rb:14:in `withdraw'
+RuntimeError (Error! Balance £0)
+```
