@@ -9,7 +9,15 @@ describe BankAccount do
   describe "#deposit" do
     it "allows the user to deposit money & updates balance" do
       savings = BankAccount.new
-      expect(savings.deposit(100)). to eq 100
+      expect(savings.deposit(100)).to eq 100
+    end
+  end
+
+  describe "#withdraw" do
+    it "allows the user to withdraw money & updates balance" do
+      savings = BankAccount.new
+      savings.deposit(100)
+      expect(savings.withdraw(50)).to eq 50
     end
   end
 end
