@@ -18,5 +18,12 @@ group :development, :test do
   gem "rspec"
 end
 ```
-- The last step of the process is to run `bundle install`. This will invoke bundler, that will look into `Gemfile`, see if any of the gems need to be installed (they may already be installed), install them and save the information about the gems, their versions and dependencies into an automatically generated `Gemfile.lock`.
-- I then made my first commit.
+- The next step of the process is to run `bundle install`. This will invoke bundler, that will look into `Gemfile`, see if any of the gems need to be installed (they may already be installed), install them and save the information about the gems, their versions and dependencies into an automatically generated `Gemfile.lock`.
+- I then made my first commit and pushed to github.
+- I then typed `rspec --init` in the command line to generate RSpec conventional (default) files and create an empty test suite for the BankAccount class. This created a `spec/` folder with `spec_helper.rb` inside it, and a `.rspec` file in my project directory.
+- Using naming convention, I created my production file and spec file from the command line and made my next commit.
+
+```
+touch spec/bankaccount_spec.rb
+touch lib/bankaccount.rb
+```
