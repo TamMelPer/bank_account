@@ -6,5 +6,10 @@ describe BankAccount do
     expect(subject.balance).to eq 0
   end
 
-
+  describe "#deposit" do
+    it "allows the user to deposit money & updates balance" do
+      savings = BankAccount.new
+      expect(savings.deposit(100)). to eq 100
+    end
+  end
 end
