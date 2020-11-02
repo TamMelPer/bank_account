@@ -19,5 +19,11 @@ describe BankAccount do
       savings.deposit(100)
       expect(savings.withdraw(50)).to eq 50
     end
+
+    it "returns an error if the user tries to withdraw more than they have in the account" do
+      savings = BankAccount.new
+      savings.deposit(100)
+      expect{ savings.withdraw(150) }.to raise_error "Error! Balance £#{savings.balance}"
+    end
   end
 end

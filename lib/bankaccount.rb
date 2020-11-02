@@ -7,10 +7,17 @@ attr_reader :balance
   end
 
   def deposit(amount)
-    @balance += amount
+    total(amount)
   end
 
   def withdraw(amount)
-    @balance -= amount
+    fail "Error! Balance £#{@balance}" if amount > @balance
+    total(-amount)
   end
+
+private
+  def total(amount)
+    @balance += amount
+  end
+
 end
